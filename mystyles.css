@@ -1,0 +1,217 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+    background: linear-gradient(135deg, #0a2540, #1f3c88);
+    color: #ffffff;
+    text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    animation: fadeIn 0.6s ease;
+    margin-bottom: 0.5rem;
+}
+
+
+    
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+    font-size:xx-large;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size:x-large;
+    margin-top: 2rem;
+    color: #2ec4b6;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    border-bottom: 3px solid #2ec4b6;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255,107,53,0.8);
+}
+
+/* =========================
+   LISTS (NO BULLETS)
+========================= */
+ul, ol {
+    list-style: none; /* removed bullets */
+    font-weight: 200;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    max-width: 500px;
+    width: 90%;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* interactive hover */
+li:hover {
+    transform: translateX(6px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+}
+
+/* =========================
+   HIGHLIGHT TEXT
+========================= */
+.emphasizeText {
+    color: #2ec4b6;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+p {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2rem auto;
+    max-width: 550px;
+    color: rgba(255,255,255,0.75);
+}
+
+/* =========================
+   IMAGE
+========================= */
+img {
+    margin-top: 1rem;
+    border-radius: 14px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   BUTTON-LIKE LINKS
+========================= */
+.button-link {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.7rem 1.4rem;
+    background: #ff6b35;
+    color: white;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.button-link:hover {
+    background: #ff8c5a;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SPACING
+========================= */
+body > * {
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers horizontally */
+    justify-content: center;
+    margin: 2rem auto;
+    gap: 2rem; /* space between video and tableau */
+}
+.tableauPlaceholder {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* =========================
+   TOP RIBBON NAV BAR
+========================= */
+.top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 37, 64, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.top-ribbon a {
+    color: #ffffff;
+    font-weight:700;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.top-ribbon a:hover {
+    background: #ff6b35;
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
